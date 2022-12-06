@@ -10,7 +10,7 @@ ${BASE_URL}         https://magento.softwaretestingboard.com/
 
 Open browser
     New Browser     chromium    false
-    New Context     viewport={'width': 1280, 'height': 720}
+    New Context     viewport={'width': 1920, 'height': 1080}
     New Page        ${BASE_URL}
     Log to console  Open new page...
 

@@ -4,6 +4,10 @@ Resource    ../../resources/common.robot
 Suite Setup     Open browser
 Suite Teardown  End test
 
+Documentation        This test has been designed to have as few keywords as possible,
+...                  but keep the test cases as readable as possible. 
+...                  Contains link -keyword is ment to be used in multiple link identifications
+
 *** Variables ***
 
 
@@ -30,9 +34,6 @@ Check footer links
 Check hot sellers
     Contains hot sellers header
 
-
-
-
 *** Keywords ***
 
 Contains layout elements
@@ -46,18 +47,21 @@ Contains layout elements
     Get Element Count    //*[@id="ui-id-2"]    >  0
 
 Has sign in features
+    # Sign in name can be searched from whole document (first line) or narrow down more accurate (second line).
     Get Element Count    //*[contains(text(), "Sign In")]    >  0
     Get Element Count    //*/div[2]/header/div[1]/div/ul/li[2]/a[contains(text(), "Sign In")]    >  0
-    #Get Element Count    /html/body/div[2]/header/div[1]/div/ul/li[2]/a[contains(text(), "Sign In")]    >  0
 
 Contains link
     [Arguments]    ${name}
+    # Seach given named link from the whole page
     Get Element Count    //*/a[contains(text(), "${name}")]    >  0
 
 Contains hot sellers header
+    # Check that Hot Sellers header can be found
     Get Element Count    //*[@id="maincontent"]/div[3]/div/div[2]/div[2]/h2  >  0
 
 Contains pictures
+    # Check that all pictures from the mainpage can be found
     Get Element Count    //*[@id="maincontent"]/div[3]/div/div[2]/div[1]/a/img  >  0
     Get Element Count    //*[@id="maincontent"]/div[3]/div/div[2]/div[1]/div/a[1]/img  >  0
     Get Element Count    //*[@id="maincontent"]/div[3]/div/div[2]/div[1]/div/a[2]/span[1]/img  >  0

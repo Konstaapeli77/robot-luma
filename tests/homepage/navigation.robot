@@ -4,13 +4,15 @@ Resource    ../../resources/common.robot
 Suite Setup     Open browser
 Suite Teardown  End test
 
+Documentation        This tests shows how to use virtual mouse hover.
+
 *** Variables ***
 
 
 *** Test Cases ***
 
-Verify navigation
-    Show whats new
+Check navigation bar exists
+    Whats new is visible
 
 Browse women clothing
     Browse women jackets
@@ -20,7 +22,7 @@ Browse men clothing
 
 *** Keywords ***
 
-Show whats new
+Whats new is visible
     Get Element count        //*[@id="ui-id-3"]/span    >  0
     
 Browse women jackets
