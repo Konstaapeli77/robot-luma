@@ -1,3 +1,10 @@
+# Robot Framework files
+log.html
+output.xml
+playwright-*.txt
+report.html
+browser/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
