@@ -13,14 +13,14 @@ Documentation        This test has been designed to have as few keywords as poss
 
 *** Test Cases ***
 
-Check homepage
+Check homepage is valid
     Has sign in features
     Contains layout elements
 
-Check homepage images
+Check homepage has images
     Contains pictures
 
-Check footer links
+Check footer links exist
     Contains link    More websites for practice
     Contains link    About us
     Contains link    Customer Service
@@ -31,7 +31,7 @@ Check footer links
     Contains link    Advanced Search
     Contains link    Orders and Returns
 
-Check hot sellers
+Check hot sellers exist
     Contains hot sellers header
 
 *** Keywords ***
