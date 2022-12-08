@@ -27,5 +27,9 @@ Go to homepage
 Go to whats new page
     Go to               https://magento.softwaretestingboard.com/what-is-new.html
 
+Go to cart
+    Go to              https://magento.softwaretestingboard.com/checkout/cart/
+
 Verify whats new page
     Get element count   xpath=//*[@id="page-title-heading"]/span[contains(text(), "What's New")]  >  0
+
