@@ -9,7 +9,6 @@ Create random email
     ${EMAIL}=  Random Email
     Set suite variable  ${EMAIL}
     ${EMAIL_PREFIX}=  Random Email Prefix   kokeilu
-#    ${EMAIL_PREFIX}=  Random Email Prefix   ${EMAIL}
     Set suite variable  ${EMAIL_PREFIX}
 
 Click create account link
@@ -18,9 +17,7 @@ Click create account link
     Get Element Count         //*[@id="maincontent"]/div[1]/h1/span[contains(text(), "Create New Customer Account")]    >  0
     Type Text                 //input[@name="firstname"]         ${USER_FIRSTNAME}
     Type Text                 //input[@name="lastname"]          ${USER_LASTNAME}
-    Check Checkbox            //input[@name="is_subscribed"]
-    
-#    Type Text                 internal:label=Email             ${EMAIL}
+    Check Checkbox            //input[@name="is_subscribed"]  
     Type Text                 //input[@id="email_address"]             ${EMAIL}
     Type Text                 //input[@id="password"]          mall1kas!
     Type Text                 //input[@name="password_confirmation"]          mall1kas!
