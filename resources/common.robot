@@ -1,6 +1,6 @@
 *** Settings ***
-
-Library     Browser
+Resource    variables.robot
+Library     Browser    timeout=25s
 
 *** Variables ***
 

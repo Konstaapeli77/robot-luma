@@ -18,7 +18,7 @@ Browse women clothing
     Browse women jackets
     
 Browse men clothing
-    Browse men jackets
+    Browse men tops
 
 *** Keywords ***
 
@@ -33,7 +33,7 @@ Browse women jackets
     Click                    //*[@id="ui-id-11"]/span[contains(text(), "Jackets")]    
     Get Element Count        //*[@id="page-title-heading"]/span    >  0
 
-Browse men jackets
+Browse men tops
     Hover                    //*[@id="ui-id-5"]/span[2][contains(text(), "Men")]
     Get Element Count        //*[@id="ui-id-17"]/span[2][contains(text(), "Tops")]    >  0
 
