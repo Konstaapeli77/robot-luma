@@ -11,22 +11,34 @@ Documentation            Test description
 
 *** Test Cases ***
 
-Buy product
-    Browse to jackets 
+Select the product
+    Hover over womens collection
+    Select womens jacket category
+    Select blue jacket from the listing
+
+Choose product properties and add to cart
+    See the product in product page
+    Select size XS, blue color and pick 3 quantity
     Add product to cart
-    Click cart icon
-    Remove product from cart
+    Wait to see that products were added to the cart
+
+Remove product from cart
+    Go to shopping cart
+    Move product to trash bin
 
 *** Keywords ***
 
-Remove product from cart
-    # Check that h1 Shopping cart is visible
-    Wait For Elements State      //*[@id="maincontent"]/div[1]/h1/span[contains(text(), "Shopping Cart")]    visible
-    Get Element Count            //*[@id="maincontent"]/div[1]/h1/span[contains(text(), "Shopping Cart")]    >  0
-    # Wait & click trash bin
-    Wait For Elements State      //*[@id="shopping-cart-table"]/tbody/tr[2]/td/div/a[2]    visible
-    Click                        //*[@id="shopping-cart-table"]/tbody/tr[2]/td/div/a[2]
-    Wait For Elements State      //*[@id="maincontent"]/div[3]/div/div[2]/p[1][contains(text(), "You have no items in your shopping cart.")]    visible                                                            
+
+Go to shopping cart
+    Wait For Elements State    //html/body/div[2]/header/div[2]/div[1]/a  visible
+    Click                      //html/body/div[2]/header/div[2]/div[1]/a
+
+Move product to trash bin
+    Wait For Elements State    //*[@id="mini-cart"]/li/div/div/div[3]/div[2]/a  visible
+    Click                      //*[@id="mini-cart"]/li/div/div/div[3]/div[2]/a
+    Wait For Elements State    //html/body/div[4]/aside[2]/div[2]/footer/button[2]  visible
+    Click                      //html/body/div[4]/aside[2]/div[2]/footer/button[2]
+
 
 
     
