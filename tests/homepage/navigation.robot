@@ -4,7 +4,8 @@ Resource    ../../resources/common.robot
 Suite Setup     Open browser
 Suite Teardown  End test
 
-Documentation        This tests shows how to use virtual mouse hover.
+Documentation        This tests goes through navigatino links
+...                  First women tops>jackets and then men tops.
 
 *** Variables ***
 

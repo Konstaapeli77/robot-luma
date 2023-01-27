@@ -5,7 +5,9 @@ Resource    product-mgmt.robot
 Suite Setup     Open browser
 Suite Teardown  End test
 
-Documentation            Test description
+Documentation            Hover over links to open child link lists. 
+...                      Select product and buy it.
+...                      Note! Hover over links
 
 *** Variables ***
 
