@@ -13,29 +13,6 @@ Project's intention is to show how Robot Framework' Browser Libarary can be used
 - Create account and sing in
 ### Purchase
 - Buy product
-- Remove product
+- Remove product from cart
 ### What's new
 - Categories exist
-
-## Integrations
-Project has integrations to:
-- Trello board
-- Robot Framework sourcode
-- Confluence page (comming soon)
-- Actions (comming soon)
-- Docker image (comming soon)
-- Artifactort (comming soon)
-
-**Notice!** Ask author for user account for Atlassian products.
-
-## Project's Trello board:
-https://trello.com/invite/b/7chaCtLb/ATTI1279436291b1037ee7499e9024f39d743EC095E6/luma
-
-## Jira page
-https://ratkaisutehdas.atlassian.net/jira/software/projects/LUMA/boards/2
-
-## Confluence page
-https://ratkaisutehdas.atlassian.net/wiki/home
-
-
-
