@@ -4,9 +4,9 @@ Resource    ../../resources/common.robot
 Suite Setup     Open browser
 Suite Teardown  End test
 
-Documentation        This test has been designed to have as few keywords as possible,
-...                  but keep the test cases as readable as possible. 
-...                  Contains link -keyword is ment to be used in multiple link identifications
+Documentation        This test checks that the web page layout is according to design.
+...                  Note! Contains link -keyword is ment to be used in multiple links 
+...                  for this it uses a parameter which contains link text.
 
 *** Variables ***
 
@@ -14,7 +14,7 @@ Documentation        This test has been designed to have as few keywords as poss
 *** Test Cases ***
 
 Check homepage is valid
-    Has sign in features
+    Page Has sign in elements
     Contains layout elements
 
 Check homepage has images
@@ -46,7 +46,7 @@ Contains layout elements
     #Contains footer
     Get Element Count    //*[@id="ui-id-2"]    >  0
 
-Has sign in features
+Page Has sign in elements
     # Sign in name can be searched from whole document (first line) or narrow down more accurate (second line).
     Get Element Count    //*[contains(text(), "Sign In")]    >  0
     Get Element Count    //*/div[2]/header/div[1]/div/ul/li[2]/a[contains(text(), "Sign In")]    >  0

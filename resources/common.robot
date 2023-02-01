@@ -12,10 +12,8 @@ Open browser
     New Browser     chromium    false
     New Context     viewport={'width': 1920, 'height': 1080}
     New Page        ${BASE_URL}
-    Log to console  Open new page...
 
 End test
-    Log to console  Close browser...
     Close browser
 
 Verify homepage
