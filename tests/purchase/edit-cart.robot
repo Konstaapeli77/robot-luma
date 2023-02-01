@@ -35,7 +35,6 @@ Edit product in cart
 *** Keywords ***
 
 Open cart dialog
-    Sleep  1s
     Click                        //html/body/div[2]/header/div[2]/div[1]/a
 
 Change quantity to 2
@@ -46,7 +45,6 @@ Change quantity to 2
     Click                        //*[@class="update-cart-item"]/span
     Wait For Elements State      //*[@id="minicart-content-wrapper"]/div[2]/div[1]/span[1][contains(text(), "2")]    visible
     Get Element Count            //*[@id="minicart-content-wrapper"]/div[2]/div[1]/span[1][contains(text(), "2")]    >  0
-    Sleep  1s
 
 Go to cart
     Click                        //*[@id="minicart-content-wrapper"]/div[2]/div[5]/div/a
@@ -56,4 +54,3 @@ Change quantity to 50 and press enter
     Type Text                    //*[@class="input-text qty"]    50
     Keyboard Key                 press    Enter
     Wait For Elements State      //*[@id="shopping-cart-table"]/tbody/tr[1]/td[4]/span/span/span[contains(text(), "$3,850.00")]     visible
-    Sleep  1s

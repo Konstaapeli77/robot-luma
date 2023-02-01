@@ -73,15 +73,6 @@ Wait to see that products were added to the cart
     Click                        //*/div[2]/header/div[2]/div[1]/a/span[1][contains(text(), "My Cart")]
     Wait For Elements State      //*[@id="top-cart-btn-checkout"]    visible
     Click                        //*[@id="top-cart-btn-checkout"]
-    Sleep  1s
-
-
-Click cart icon
-    Click                        //*/div[2]/header/div[2]/div[1]/a/span[1][contains(text(), "My Cart")]
-    Wait For Elements State      //*[@id="minicart-content-wrapper"]/div[2]/div[5]/div/a/span[contains(text(), "View and Edit Cart")]    visible
-    Click                        //*[@id="minicart-content-wrapper"]/div[2]/div[5]/div/a/span[contains(text(), "View and Edit Cart")]
-    Sleep  1s
-
 
 Fill in order details
     Wait For Elements State      //*[@id="opc-sidebar"]/div[1]/span[contains(text(), "Order Summary")]    visible
@@ -95,7 +86,7 @@ Add person details
 Add address details
     Type Text                    //input[@name="street[0]"]        Mallitie 4 C
     Type Text                    //input[@name="city"]             Helsinki
-    Sleep     500ms
+#    Sleep     500ms
     Wait For Elements State      //select[@name="region_id"]       visible
     Select Options By            //select[@name="country_id"]      text    Finland
     Select Options By            //select[@name="region_id"]       text    Lappi
@@ -104,16 +95,11 @@ Add address details
 
 Add shipping method
     Check Checkbox               //*[@name="ko_unique_2"]
-    Sleep     500ms
-
-    # Jotain
     Wait For Elements State      //*[@id="shipping-method-buttons-container"]/div/button   visible
     Click                        //*[@id="shipping-method-buttons-container"]/div/button
-    Sleep     5s
     
 Place order
     Wait For Elements State    //*[@id="checkout-payment-method-load"]/div/div/div[2]/div[2]/div[4]/div/button  visible
     Click                      //*[@id="checkout-payment-method-load"]/div/div/div[2]/div[2]/div[4]/div/button
-    Sleep   5s
     Wait For Elements State    //*[@id="maincontent"]/div[1]/h1/span[contains(text(), "Thank you for your purchase!")]  visible
     
